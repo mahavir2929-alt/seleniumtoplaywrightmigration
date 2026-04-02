@@ -21,6 +21,6 @@ jobs:
         run: npm init -y && npm install axios
 
       - name: Run Review Script
-        run: node .github/agents/code-review.agent.md
+        run: node .github/agents/run-review.js
         env:
           GITHUB_TOKEN: ${{ secrets.SELPWSECRET}}
