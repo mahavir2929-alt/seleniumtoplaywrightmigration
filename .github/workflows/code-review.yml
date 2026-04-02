@@ -8,6 +8,10 @@ jobs:
   review:
     runs-on: ubuntu-latest
 
+    permissions:
+      pull-requests: write
+      contents: read
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -15,12 +19,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: "22"
 
       - name: Install dependencies
-        run: npm init -y && npm install axios
+        run: npm init -y && npm install axios @octokit/rest
 
       - name: Run Review Script
         run: node .github/agents/run-review.js
         env:
-          GITHUB_TOKEN: ${{ secrets.SELPWSECRET}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
