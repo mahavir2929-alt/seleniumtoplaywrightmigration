@@ -1,0 +1,35 @@
+# =====================
+# Java / Maven
+# =====================
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+.classpath
+.project
+.settings/
+
+# =====================
+# Node / Playwright
+# =====================
+playwright-ts/node_modules/
+playwright-ts/playwright-report/
+playwright-ts/test-results/
+playwright-ts/dist/
+playwright-ts/.env
+
+# =====================
+# OS
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# IDE
+# =====================
+.idea/
+*.iws
+*.ipr
+.vscode/
