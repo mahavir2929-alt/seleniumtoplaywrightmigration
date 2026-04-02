@@ -1,0 +1,21 @@
+{
+  "name": "playwright-ts-framework",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright + TypeScript automation framework",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:amazon": "playwright test tests/amazon-search.spec.ts",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://www.amazon.com"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.2",
+    "dotenv": "^16.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
